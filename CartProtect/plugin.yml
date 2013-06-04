@@ -1,0 +1,22 @@
+name: CartProtect
+main: com.github.CubieX.CartProtect.CartProtect
+version: 1.0.0
+author: CubieX
+depend: [WorldGuard]
+softdepend: [PermissionsEx, zPermissions, bPermissions, PermissionsBukkit]
+description: Protects Storage- and Hopper minecarts with WorldGuard building rights
+
+commands:
+    cprotect:
+      description: Using CartProtect
+      usage: /cprotect version | reload
+
+permissions:
+    cartprotect.override:
+        description: Allows accessing carts regardless of building rights
+        default: op
+    cartprotect.admin:
+        description: Allows total control over the plugin
+        default: op
+        children:
+            cartprotect.override: true
